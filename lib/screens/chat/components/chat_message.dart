@@ -36,7 +36,6 @@ class ChatMessage extends StatelessWidget {
           const SizedBox(height: 8.0),
           Text(
             message.text,
-            overflow: TextOverflow.ellipsis,
             style: const TextStyle(
               color: Colors.black,
               fontSize: 12.0,
@@ -47,11 +46,7 @@ class ChatMessage extends StatelessWidget {
       ),
     );
     if (isMe) {
-      return Row(
-        children: [
-          msg,
-        ],
-      );
+      return msg;
     }
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
